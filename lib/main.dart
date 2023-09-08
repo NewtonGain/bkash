@@ -18,8 +18,7 @@ class _MyAppState extends State<MyApp> {
         backgroundColor: Colors.white,
         body: SafeArea(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.start, 
             children: [
               Row(
                 children: [
