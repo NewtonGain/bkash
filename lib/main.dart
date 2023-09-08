@@ -18,13 +18,15 @@ class _MyAppState extends State<MyApp> {
         backgroundColor: Colors.white,
         body: SafeArea(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start, 
             children: [
               Row(
                 children: [
                   IconButton(
                     onPressed: () {},
                     icon: const Icon(Icons.arrow_back),
+                  ),
+                  const SizedBox(
+                    width: 220,
                   ),
                   TextButton(
                     onPressed: () {},
@@ -34,31 +36,52 @@ class _MyAppState extends State<MyApp> {
               ),
               Row(
                 children: [
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.bakery_dining_sharp),
+                  Image.asset(
+                    "assets/images/b.png",
+                    width: 60,
+                    height: 60,
+                  ),
+                  const SizedBox(
+                    width: 220,
                   ),
                   IconButton(
                     onPressed: () {},
-                    icon: const Icon(Icons.qr_code_2_rounded),
+                    icon: const Icon(
+                      Icons.qr_code_2_rounded,
+                      color: Color.fromARGB(255, 253, 97, 86),
+                    ),
+                    iconSize: 60,
                   ),
                 ],
               ),
-              const Text("Log In"),
-              const Text("to your bKash account"),
-              const Text("Account Number"),
+              const Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Text(
+                    "Log In",
+                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                  ),
+                  Text("to your bKash account"),
+                  Text("Account Number"),
+                ],
+              ),
               Row(
                 children: [
                   const Text("bKash PIN"),
                   TextButton(
                     onPressed: () {},
-                    child: const Text("Forgot PIN"),
+                    child: const Text("Forgot PIN?"),
                   ),
                 ],
               ),
-              const TextField(
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(), hintText: "Enter bKash PIN"),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: TextField(
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      hintText: "Enter bKash PIN"),
+                ),
               ),
               TextButton(
                 onPressed: () {},
